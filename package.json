@@ -1,0 +1,42 @@
+{
+  "name": "tokin",
+  "version": "0.0.1",
+  "description": "mechanical",
+  "main": "mech.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --watch"
+  },
+  "keywords": [
+    "tokin",
+    "mech"
+  ],
+  "author": "Ilya Nikitin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "gl-plot3d": "^1.5.4",
+    "gl-surface3d": "^1.3.1",
+    "glslify": "^6.1.0",
+    "ndarray": "1.0.16",
+    "ndarray-fill": "^1.0.2",
+    "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "compression": "^1.7.1",
+    "copy-webpack-plugin": "^4.3.1",
+    "file-loader": "^1.1.6",
+    "glslify-loader": "^1.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack-glsl-loader": "^1.0.1"
+  },
+  "browserify": {
+    "transform": [
+      "glslify"
+    ]
+  }
+}

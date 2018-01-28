@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link  type="x-shader/x-fragment" href="composite.glsl">
+    <link type="x-shader/x-vertex" href="vertex.glsl">
+
+</head>
+<body>
+
+<form>
+    <input placeholder="Длина пластины, м" id="len"/>
+    <input placeholder="Ширина пластины, м" id="wid"/>
+    <input placeholder="Толщина пластины, м" id="thin"/>
+    <input placeholder="Масса пластины с элементами, кг" id="weight"/>
+    <input placeholder="Модуль упругости" id="bounce"/>
+    <input placeholder="Коэффициент Пуассона" id="puas"/>
+    <button type="submit" class="count">Рассчитать</button>
+</form>
+
+<canvas class="glslCanvas" data-fragment-url="composite.glsl" data-vertex-url="vertex.glsl" width="500" height="500"></canvas>
+
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        margin: 16px 8px;
+        width: 200px;
+    }
+
+    button {
+        width: 200px;
+        padding: 8px 0;
+        margin: 16px 8px;
+    }
+
+</style>
+<script src="vertex.js" type="x-shader/x-vertex" id="vertexshader"></script>
+<script src="composite.js" type="x-shader/x-fragment" id="fragmentshader"></script>
+<!--<script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>-->
+
+</body>
+</html>
