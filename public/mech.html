@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link  type="x-shader/x-fragment" href="composite.glsl">
-    <link type="x-shader/x-vertex" href="vertex.glsl">
-
 </head>
 <body>
 
@@ -19,7 +16,24 @@
     <button type="submit" class="count">Рассчитать</button>
 </form>
 
-<canvas class="glslCanvas" data-fragment-url="composite.glsl" data-vertex-url="vertex.glsl" width="500" height="500"></canvas>
+<div class="graphics">
+    <div>
+        <span>Коэффициент передачи по ускорению</span>
+        <canvas class="form-vibrate" width="400" height="400"></canvas>
+    </div>
+    <div>
+        <span>Виброускорение</span>
+        <canvas class="vibro-acceler" width="400" height="400"></canvas>
+    </div>
+    <div>
+        <span>Виброперемещение</span>
+        <canvas class="vibro-move" width="400" height="400"></canvas>
+    </div>
+</div>
+
+<div class="result">
+
+</div>
 
 <style>
     form {
@@ -38,10 +52,20 @@
         margin: 16px 8px;
     }
 
+    .graphics {
+        display: flex;
+    }
+
+    .graphics > div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .result{
+        margin-top: 50px;
+    }
+
 </style>
-<script src="vertex.js" type="x-shader/x-vertex" id="vertexshader"></script>
-<script src="composite.js" type="x-shader/x-fragment" id="fragmentshader"></script>
-<!--<script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>-->
 
 </body>
 </html>

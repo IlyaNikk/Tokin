@@ -29,6 +29,7 @@
     "clean-webpack-plugin": "^0.1.18",
     "compression": "^1.7.1",
     "copy-webpack-plugin": "^4.3.1",
+    "ify-loader": "^1.1.0",
     "file-loader": "^1.1.6",
     "glslify-loader": "^1.0.2",
     "html-webpack-plugin": "^2.30.1",
