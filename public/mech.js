@@ -67,9 +67,10 @@ button.addEventListener('click', (event) => {
         gamma.push([]);
         y.forEach(numy => {
             numy /= wid;
-            const Ky = 0.00711504 + 1.05143 * numy - 22.44 * Math.pow(numx, 2) + 364.434 * Math.pow(numx, 3)
-                - 1646.47 * Math.pow(numx, 4) + 3574.17 * Math.pow(numx, 5) - 4174.28 * Math.pow(numx, 6)
-                + 2517.49 * Math.pow(numx, 7) - 613.95 * Math.pow(numx, 8); // коэффициент формы колебнания
+            const Ky = 0.00711504 + 1.05143 * numy - 22.44 * Math.pow(numy, 2) + 364.434 * Math.pow(numy, 3)
+                - 1646.47 * Math.pow(numy, 4) + 3574.17 * Math.pow(numy, 5) - 4174.28 * Math.pow(numy, 6)
+                + 2517.49 * Math.pow(numy, 7) - 613.95 * Math.pow(numy, 8); // коэффициент формы колебнания
+            console.info(`x: ${numx}, y: ${numy}, Kx: ${Kx}, Ky: ${Ky}`)
             gamma[index].push(Math.sqrt((Math.pow((1 + (Kx * Ky - 1)), 2) + Math.pow(e11, 2)) /
                 (Math.pow(e11, 2)))); //коэффициент передачи по ускорению
             av[index].push(a0 * gamma[index][gamma[index].length - 1]);
